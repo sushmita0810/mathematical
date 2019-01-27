@@ -1,0 +1,44 @@
+#include<algorithm>
+#include<string>
+using namespace std;
+string idtoStringurl(long long n){
+    char map[]="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+        string stringurl;
+        while(n){
+            stringurl.push_back(map[n%62]);
+            n=n/62;
+        }    
+        reverse(stringurl.begin(),stringurl.end());
+            return stringurl;
+}
+int stringtoInt(string shorturl){
+    long long id=0;
+    for(int i=0;i<shorturl.length();i++){
+        if('a'<=shorturl[i]&& shorturl[i]<='z'){
+        id=id*62+(shorturl[i]-'a');
+        }
+        if('A'<=shorturl[i]&& shorturl[i]<='Z'){
+            id=id*62+(shorturl[i]-'A')+26;
+        }
+        if('0'<=shorturl[i]&& shorturl[i]<='9'){
+            id=id*62+(shorturl[i]-'0')+52;
+        }
+    }
+    return id;
+}
+
+int main() {
+
+int t;
+cin>>t;
+while(t--){
+    long long n;
+    cin>>n;
+    string shorturl= idtoStringurl(n); 
+
+    cout<<shorturl<<endl;
+    cout<<stringtoInt(shorturl);
+    cout<<endl;
+}
+	return 0;
+}
