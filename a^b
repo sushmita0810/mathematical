@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+long int fun(long int a, long int b)
+{
+   if (b == 0)
+       return 1;
+   if (b % 2 == 0)
+       return fun((a*a)%1000000007, b/2) %1000000007;
+ 
+   return (fun((a*a)%1000000007, b/2)*a) % 1000000007;
+}
+int main()
+{
+    int t,b,p;
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%d",&b);
+        scanf("%d",&p);
+        printf("%ld\n",fun(b,p));
+    }
+    return 0;
+}
