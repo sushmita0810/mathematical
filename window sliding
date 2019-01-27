@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+
+#define ll long long
+using namespace std;
+
+ll countSubArray(ll int arr[], ll int n, ll int k){
+    ll product = 1;
+	int s = 0, i = 0;
+	int res = 0;
+	while(i < n){
+	    product *= arr[i];
+	    if(product < k)
+	        res += i - s + 1;
+	    else{
+	        while(s < i && product > k)
+	            product /= arr[s++];
+	            
+	        if(product < k)
+	            res += i - s + 1;
+	    }
+	    i++;
+	}
+	return res;
+}
+
+int main()
+ {
+	//code
+	ll int t;
+	cin >> t;
+	while(t--){
+	    ll int n, k;
+	    cin >> n >> k;
+	    ll int arr[n];
+	    for(int i = 0; i < n; i++)
+	        cin >> arr[i];
+	   cout << countSubArray(arr, n, k) << endl;
+	}
+	return 0;
+}
