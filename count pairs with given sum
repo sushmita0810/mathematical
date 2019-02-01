@@ -1,0 +1,30 @@
+#include<iostream>
+using namespace std;
+int getPairsCount(int a[],int n,int sum){
+    unordered_map<int ,int > m;
+    for(int i=0;i<n;i++)
+        m[a[i]]++;
+        int twice_count=0;
+        for(int i=0;i<n;i++){
+         twice_count+=m[sum-a[i]];   
+         if(sum-a[i]==a[i])
+         twice_count--;
+        }
+        return twice_count/2;
+}
+int main() {
+    int t;
+    cin>>t;
+    while(t--){
+        int n,sum;
+        cin>>n>>sum;
+        int a[n];
+        for(int i=0;i<n;i++){
+            cin>>a[i];
+        }
+        cout<<getPairsCount( a, n,  sum);
+        cout<<endl;
+    }
+    
+	return 0;
+}
