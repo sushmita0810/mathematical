@@ -6,3 +6,6 @@ Some of the questions discussed are:
 1.modular exponentiation for large numbers
 2.a^b for large numbers
 3.url shortener
+4.count pairs with given sum
+5.fibonacci like series
+5.count number of words
