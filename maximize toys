@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int t;
+	cin>>t;
+	while(t--){
+	    int n,i,k,s=0;
+	    cin>>n>>k;
+	    int vt[n];
+	    for( i=0;i<n;i++){
+	        cin>>vt[i];
+	    }
+	    sort(vt,vt+n);
+	    i=0;
+	    while(s<=k){
+	        s=s+vt[i];
+	        i++;
+	    }
+	    cout<<i-1<<endl;
+	}
+	return 0;
+}
