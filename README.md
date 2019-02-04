@@ -9,3 +9,4 @@ Some of the questions discussed are:
 4.count pairs with given sum
 5.fibonacci like series
 5.count number of words
+6.maximize toys
