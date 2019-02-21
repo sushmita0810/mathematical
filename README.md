@@ -11,4 +11,8 @@ Some of the questions discussed are:
 5.fibonacci like series
 5.count number of words
 6.maximize toys
-<Here we will now also deal with the graph problems of data structure>
+Here we will now also deal with the graph problems of data structure
+1. Prisoners Escape problem-SPOJ
+2.
+3.
+
