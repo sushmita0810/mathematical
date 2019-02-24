@@ -74,7 +74,7 @@ int main() {
       if (inter(i, j)) NetFlow::link(i * 2 + 1, j * 2, inf);
     }
   }
-  int d=NetFlow::ISAP();
+  int d=NetFlow::ISAP();//d returns the number of soldiers that sholud be removed so that the prisoners cross easily
   if(d==0)
     cout<<"0"<<endl;
   else
