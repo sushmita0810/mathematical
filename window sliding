@@ -25,7 +25,7 @@ ll countSubArray(ll int arr[], ll int n, ll int k){
 
 int main()
  {
-	//code
+	
 	ll int t;
 	cin >> t;
 	while(t--){
